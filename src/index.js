@@ -89,7 +89,7 @@ client.on("interactionCreate", async (interaction) => {
         const nextCircuitName = races[i].Circuit.circuitName;
         const nextRaceCountry = races[i].Circuit.Location.country;
         const nextRaceTime = races[i].time;
-        const nextRaceDate = races[i].date;
+        const nextRaceDate = currentRaceDate.toLocaleDateString();
 
         interaction.reply(
           `The next race is the ${nextRaceName} in ${nextRaceCountry} at the ${nextCircuitName} on ${nextRaceDate}. 🔴 🟢 🏎️  LIGHTS OUT at ${nextRaceTime} (BST -1)  🏎️ 🟢 🔴`
