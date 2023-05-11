@@ -89,13 +89,15 @@ client.on("interactionCreate", async (interaction) => {
         const nextCircuitName = races[i].Circuit.circuitName;
         const nextRaceCountry = races[i].Circuit.Location.country;
         const nextRaceTime = races[i].time;
+        const nextRaceDate = races[i].date;
 
         interaction.reply(
-          `The next race is the ${nextRaceName} in ${nextRaceCountry} at the ${nextCircuitName}. 🔴 🟢 🏎️  LIGHTS OUT at ${nextRaceTime} (BST -1)  🏎️ 🟢 🔴`
+          `The next race is the ${nextRaceName} in ${nextRaceCountry} at the ${nextCircuitName} on ${nextRaceDate}. 🔴 🟢 🏎️  LIGHTS OUT at ${nextRaceTime} (BST -1)  🏎️ 🟢 🔴`
         );
         break;
       }
-    }
+    } 
+
   }
   //.addFields({name: 'Field title', value: 'Some Value'})
 });
